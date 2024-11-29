@@ -1,6 +1,6 @@
 # EcoEdgeInfer
 
-This repository contains the implementation code for our paper - [EcoEdgeInfer](https://pramodh.rachuri.dev/files/pramodh_EcoEdgeInfer_sec24.pdf). The paper introduces **EcoEdgeInfer: Dynamically Optimizing Latency and Sustainability for Inference on Edge Devices**.
+This repository contains the implementation code for our paper - [EcoEdgeInfer](https://pramodh.rachuri.dev/files/pramodh_EcoEdgeInfer_sec24.pdf).
 
 ## Quick Start
 
@@ -33,7 +33,7 @@ python3 example_EcoGD.py
 This file contains the implementation of the **EcoEdgeInfer** framework. Import this module to integrate the framework into your own projects. Below is a high-level overview of the framework:
 
 <p align="center">
-    <img src="system_design.jpg" alt="EcoEdgeInfer Framework Design" width="50%"/>
+    <img src="system_design.jpg" alt="EcoEdgeInfer Framework Design" width="70%"/>
 </p>
 
 #### Optimizers
