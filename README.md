@@ -63,7 +63,7 @@ Detailed method and class descriptions are available as **docstrings** within th
 ---
 
 ### 2. `nvpmplus.py`
-The **nvpmplus** library offers fine-grained control over power modes on Jetson devices (e.g., Nano, Xavier NX). While `nvpmodel` provides limited preset modes, `nvpmplus` allows setting custom CPU and GPU frequencies as well as changing governors.  
+Our **nvpmplus** script offers fine-grained control over power modes on Jetson devices (e.g., Nano, Xavier NX). While `nvpmodel` provides limited preset modes, `nvpmplus` allows setting custom CPU and GPU frequencies as well as changing governors.  
 
 #### Features:
 - Adjust CPU and GPU frequencies to any value within the device’s range.  
@@ -102,7 +102,7 @@ options:
 ---
 
 ### 3. `power_profile.py`
-The **power_profile** library measures power consumption of specific functions with high precision. Unlike `tegrastats` (which samples every second), `power_profile` offers higher sampling rates, making it easier to measure energy consumption for individual functions.
+Our **power_profile** script measures power consumption of specific functions with high precision. Unlike `tegrastats` (which samples every second), `power_profile` offers higher sampling rates, making it easier to measure energy consumption for individual functions.
 
 #### Features:
 - Measure energy consumption in Joules.  
