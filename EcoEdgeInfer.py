@@ -141,8 +141,8 @@ class EnergyOptimizer_skeleton:
 		if len(self.cache_energy) >= self.cache_length:
 
 			if self.optim_T == 2 and self.energy_baseline==None: #setting baseline in the 3rd config if not already set
-				self.energy_baseline = np.median(self.cache_energy[100:])
-				self.time_baseline = np.median(self.cache_time[100:])
+				self.energy_baseline = np.mean(self.cache_energy[100:])
+				self.time_baseline = np.mean(self.cache_time[100:])
 
 			self.update_history()
 			
@@ -157,8 +157,8 @@ class EnergyOptimizer_skeleton:
 		"""
 
 		# calculate the cost of the last configuration
-		mean_energy = np.median(self.cache_energy[100:])
-		mean_time = np.median(self.cache_time[100:])
+		mean_energy = np.mean(self.cache_energy[100:])
+		mean_time = np.mean(self.cache_time[100:])
 		
 		try:
 			cost = self.alpha*mean_energy/self.energy_baseline + (1-self.alpha)*mean_time/self.time_baseline
@@ -466,8 +466,8 @@ class EnergyOptimizer_MAB_multiDim(EnergyOptimizer_skeleton):
 		"""
 		This function is used to update the history data structure. It calculates the cost of the last configuration and updates the history matrix. This is different from the base class because it uses an exponential average to update the cost instead of just overwriting it.
 		"""
-		mean_energy = np.median(self.cache_energy[100:])
-		mean_time = np.median(self.cache_time[100:])
+		mean_energy = np.mean(self.cache_energy[100:])
+		mean_time = np.mean(self.cache_time[100:])
 		
 		try:
 			cost = self.alpha*mean_energy/self.energy_baseline + (1-self.alpha)*mean_time/self.time_baseline
@@ -820,8 +820,8 @@ class EnergyOptimizer_BayesianOptimization(EnergyOptimizer_skeleton):
 		This function is used to update the history data structure. It calculates the cost of the last configuration and updates the history matrix. This is different from the base class because it uses a dictionary to store the history
 		"""
 		# calculate the cost of the last configuration
-		mean_energy = np.median(self.cache_energy[100:])
-		mean_time = np.median(self.cache_time[100:])
+		mean_energy = np.mean(self.cache_energy[100:])
+		mean_time = np.mean(self.cache_time[100:])
 		
 		try:
 			cost = self.alpha*mean_energy/self.energy_baseline + (1-self.alpha)*mean_time/self.time_baseline
