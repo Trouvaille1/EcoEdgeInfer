@@ -1,6 +1,6 @@
 # EcoEdgeInfer
 
-This repository contains the implementation code for our paper - [EcoEdgeInfer](https://pramodh.rachuri.dev/files/pramodh_EcoEdgeInfer_sec24.pdf).
+This repository contains the implementation code for our paper - EcoEdgeInfer ([ACM Digital Library](https://dl.acm.org/doi/10.1109/SEC62691.2024.00023), [PDF](https://pramodh.rachuri.dev/files/pramodh_EcoEdgeInfer_sec24.pdf), [Slides](https://pramodh.rachuri.dev/files/pramodh_EcoEdgeInfer_sec24_slides.pdf)).
 
 ## Quick Start
 
@@ -121,26 +121,30 @@ The method returns the energy consumed in Joules.
 
 ---
 
-## Miscellaneous
-
-Due to size constraints, trace logs and processed data are not included in this repository. If you need access, please contact me via [pramodh.rachuri.dev](https://pramodh.rachuri.dev/), and I’ll be happy to provide the data.
-
----
-
 ## Citation
 
 If you use this code or find the **EcoEdgeInfer** framework helpful in your research, please cite our paper:  
 ```bibtex
 @inproceedings{rachuri2024ecoedgeinfer,
-  title={EcoEdgeInfer: Dynamically Optimizing Latency and Sustainability for Inference on Edge Devices},
-  author={Sri Pramodh Rachuri and Nazeer Shaik and Mehul Choksi and Anshul Gandhi},
-  booktitle = {Proceedings of the Ninth ACM/IEEE Symposium on Edge Computing},
-  series = {SEC '24}
+author = {Rachuri, Sri Pramodh and Shaik, Nazeer and Choksi, Mehul and Gandhi, Anshul},
+title = {EcoEdgeInfer: Dynamically Optimizing Latency and Sustainability for Inference on Edge Devices},
+year = {2025},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/SEC62691.2024.00023},
+doi = {10.1109/SEC62691.2024.00023},
+abstract = {The use of Deep Neural Networks (DNNs) has skyrocketed in recent years. While its applications have brought many benefits and use cases, they also have a significant environmental impact due to the high energy consumption of DNN execution. It has already been acknowledged in the literature that training DNNs is computationally expensive and requires large amounts of energy. However, the energy consumption of DNN inference is still an area that has not received much attention, yet. With the increasing adoption of online tools, the usage of inference has significantly grown and will likely continue to grow. Unlike training, inference is user-facing, requires low latency, and is used more frequently. As such, edge devices are being considered for DNN inference due to their low latency and privacy benefits. In this context, inference on edge is a timely area that requires closer attention to regulate its energy consumption. We present EcoEdgeInfer, a system that balances performance and sustainability for DNN inference on edge devices. Our core component of EcoEdgeInfer is an adaptive optimization algorithm, EcoGD, that strategically and quickly sweeps through the hardware and software configuration space to find the jointly optimal configuration that can minimize energy consumption and latency. EcoGD is agile by design, and adapts the configuration parameters in response to time-varying and unpredictable inference workload. We evaluate EcoEdgeInfer on different DNN models using real-world traces and show that EcoGD consistently outperforms existing baselines, lowering energy consumption by 31% and reducing tail latency by 14%, on average.},
+booktitle = {Proceedings of the 2024 IEEE/ACM Symposium on Edge Computing},
+pages = {191–205},
+numpages = {15},
+location = {Rome, Italy},
+series = {SEC '24}
 }
 ```
 
-> **Note:** The official citation will be updated once the paper is published.
-
 ---
 
-This version improves readability, organization, and flow while retaining all the details you provided. Let me know if you want further adjustments!
+## Miscellaneous
+
+Due to size constraints, trace logs and processed data are not included in this repository. If you need access, please contact me using the information provided at [pramodh.rachuri.dev](https://pramodh.rachuri.dev/), and I’ll be happy to provide the data.
+
+---
