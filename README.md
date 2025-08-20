@@ -12,22 +12,18 @@ python3 example_EcoGD.py
 > **Note:** The code is currently being cleaned and better documented for enhanced readability. However, it should function as expected. If you encounter any issues, feel free to raise an issue in this repository.
 
 ## Table of Contents
-1. [EcoEdgeInfer Framework](#1-ecoedgeinfer-framework)  
-   - [Overview](#overview)  
+1. [EcoEdgeInfer Framework](#1-ecoedgeinferpy)  
    - [Optimizers](#optimizers)  
    - [Extensibility](#extensibility)  
-2. [nvpmplus Library](#2-nvpmplus-library)  
+2. [nvpmplus Library](#2-nvpmpluspy)  
    - [Features](#features)  
    - [Usage](#usage)  
-3. [power_profile Library](#3-power_profile-library)  
+3. [power_profile Library](#3-power_profilepy)  
    - [Features](#features-1)  
    - [Usage](#usage-1)  
-4. [Miscellaneous](#4-miscellaneous)  
-5. [Citation](#5-citation)
-
+4. [Citation](#citation)  
+5. [Miscellaneous](#miscellaneous)  
 ---
-
-## Repository Overview
 
 ### 1. `EcoEdgeInfer.py`
 This file contains the implementation of the **EcoEdgeInfer** framework. Import this module to integrate the framework into your own projects. Below is a high-level overview of the framework:
@@ -70,7 +66,7 @@ Our **nvpmplus** script offers fine-grained control over power modes on Jetson d
 - Change the governor of the CPU and GPU.  
 - Tested on Jetson Nano and Xavier NX.  
 
-**Usage**  
+#### Usage:
 It can used within Python scripts or as a standalone script. For running within a script, import the library and use the `set_state` or `set_gov` method. Example:  `nvpmplus.set_state(nvpmplus.cpu_lim, cpu, gpu)`
 For standalone usage, run the script with the desired arguments. More details are available in the help section.
 
@@ -109,7 +105,7 @@ Our **power_profile** script measures power consumption of specific functions wi
 - High sampling rate for precise profiling.  
 - Tested on Jetson Nano and Xavier NX.
 
-**Usage**  
+#### Usage:
 Use the `energy_calculator` method to measure energy consumption:  
 ```python
 power_profile.energy_calculator(user_function, batch_input)
