@@ -5,7 +5,10 @@ import time
 import EcoEdgeInfer
 
 # initialize the energy optimizer. Warning: This will start the queue service
-EcoEdgeInfer.optimizer = EcoEdgeInfer.EnergyOptimizer_Gradient_Descent()
+# EcoEdgeInfer.optimizer = EcoEdgeInfer.EnergyOptimizer_Gradient_Descent() #指定使用的优化方法
+# EcoEdgeInfer.optimizer = EcoEdgeInfer.EnergyOptimizer_BayesianOptimization() # 使用贝叶斯优化方法
+EcoEdgeInfer.optimizer = EcoEdgeInfer.EnergyOptimizer_MAB_multiDim()  # 使用MAB优化方法
+
 
 # use the following lines to save the logs to a file
 experiment_name = "EcoGD" 
@@ -29,6 +32,7 @@ def create_input():
     return torch.rand(1, 3, 224, 224)
 
 # Running the inference
+# 每416次（cache_length=416）触发一次优化器
 for i in range(416*100):
     run_inference(create_input())
     time.sleep(0.050)
